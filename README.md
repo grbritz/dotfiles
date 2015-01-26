@@ -1,4 +1,4 @@
-# Karan's dotfiles
+# Graeme's dotfiles - (Major credit goes to Karan Goel's .dotfiles repo)
 
 ## Installation
 
@@ -7,7 +7,7 @@
 You can clone the repository wherever you want. The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone https://github.com/karan/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/grbritz/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -21,16 +21,6 @@ Alternatively, to update while avoiding the confirmation prompt:
 ```bash
 set -- -f; source bootstrap.sh
 ```
-
-### Git-free install
-
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/karan/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
 
 ### Install Homebrew formulae
 
