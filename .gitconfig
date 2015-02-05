@@ -1,4 +1,7 @@
 [alias]
+  ci = commit
+  b = branch
+  co = checkout
 
   # View abbreviated SHA, description, and history graph of the latest 20 commits
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -77,8 +80,8 @@
 [core]
 
   # Use custom `.gitignore` and `.gitattributes`
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
+  # excludesfile = ~/.gitignore
+  # attributesfile = ~/.gitattributes
 
   # Treat spaces before tabs and all kinds of trailing whitespace as an error
   # [default] trailing-space: looks for spaces at the end of a line
@@ -92,6 +95,9 @@
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
+
+  # Set default editor to sublime
+  editor = subl
 
 [color]
 
@@ -134,11 +140,7 @@
   log = true
 
 [push]
-
-  # Use the Git 1.x.x default to avoid errors on machines with old Git
-  # installations. To use `simple` instead, add this to your `~/.extra` file:
-  # `git config --global push.default simple`. See http://git.io/mMah-w.
-  default = matching
+  default = simple
 
 # URL shorthands
 
@@ -163,8 +165,12 @@
   insteadOf = "gist:"
 
 [user]
-	name = Karan Goel
-	email = karan@goel.io
+	name = Graeme Britz
+  email = grbritz@gmail.com
 
 [GitHub]
-	user = karan
+	user = grbritz
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f

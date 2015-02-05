@@ -6,8 +6,8 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Desktop"
-alias c="cd ~/Dropbox/Codebase"
+alias desktop="cd ~/Desktop"
+alias codebase="cd ~/Dropbox/Codebase"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
@@ -38,7 +38,7 @@ alias co="git checkout"
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias cleanup-ds="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
@@ -52,3 +52,13 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Misc aliases
+alias mallet="/Applications/mallet-2.0.7/bin/mallet"
+
+# Untar files easily
+alias untar="tar -xzf"
+
+# Ruby bundler shortcuts
+alias be="bundle exec"
+alias b="bundle"

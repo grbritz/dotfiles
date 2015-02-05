@@ -34,8 +34,16 @@ fi;
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
-# set path for android studio
-export PATH=${PATH}:~/Documents/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:~/Documents/adt-bundle-mac-x86_64-20140702/sdk/tools
+
+export PATH="$PATH:~/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH=/Applications/MAMP/bin/php/php5.5.3/bin:$PATH
+export PATH=$PATH:/Applications/MAMP/Library/bin
+export PATH=$PATH:~/composer-packages/vendor/bin
+export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # add path for flow
