@@ -7,7 +7,9 @@ alias -- -="cd -"
 
 # Shortcuts
 alias desktop="cd ~/Desktop"
-alias codebase="cd ~/Dropbox/Codebase"
+# Switch to this when move my code onto dropbox
+# alias codebase="cd ~/Dropbox/Codebase"
+alias codebase="cd ~/Code/"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
@@ -28,7 +30,7 @@ alias gs="git status"
 alias ga="git add -A :/"
 alias gb="git branch"
 alias gc="git commit -m "$1""
-alias push="git push $1 $2" # push OR push [remote] [branch]
+alias gp="git push $1 $2" # gp OR gp [remote] [branch]
 alias pull="git pull"
 alias gt="git tag "$1""
 alias gpt="git push --tags"
