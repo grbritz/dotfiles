@@ -10,6 +10,7 @@ alias desktop="cd ~/Desktop"
 # Switch to this when move my code onto dropbox
 # alias codebase="cd ~/Dropbox/Codebase"
 alias codebase="cd ~/Code/"
+alias school="cd ~/Code/academic/winter-2015/"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
