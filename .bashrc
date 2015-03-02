@@ -44,6 +44,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+
 # Load RVM into a shell session *as a function*
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   # First try to load from a user install
@@ -55,6 +56,8 @@ else
   printf "ERROR: An RVM installation was not found.\n"
 fi
 
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
