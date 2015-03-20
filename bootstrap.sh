@@ -10,6 +10,12 @@ function doIt() {
   source ~/.bash_profile;
 }
 
+
+if [ ! -d "~/.vim/" ]; then
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi;
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt;
 else
