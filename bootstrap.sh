@@ -6,13 +6,14 @@ git pull origin master;
 
 function doIt() {
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-    --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
+    --exclude "README.md" --exclude "LICENSE" --exclude "monokai.vim" -avh --no-perms . ~;
   source ~/.bash_profile;
 }
 
 if [ ! -d "~/.vim/" ]; then
-  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim;
+  cp monokai.vim ~/.vim/colors/;
 fi;
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
